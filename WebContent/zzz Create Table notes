@@ -1,0 +1,58 @@
+I did not include Hibernate code that automatically generates tables 
+in the edureka database so these SQL statements should create them
+
+CREATE TABLE user_pass(
+    uid Integer PRIMARY KEY AUTO_INCREMENT,
+    name varchar(255) NOT NULL,
+    password varchar(255)
+);
+
+
+CREATE TABLE account_details(
+    ID Integer PRIMARY KEY AUTO_INCREMENT,
+    Name varchar(255) NOT NULL,
+    DOB varchar(20),
+    Address varchar(255),
+    Email varchar(255),
+    Type varchar(10)
+);
+
+
+CREATE TABLE credit_card(
+    ID Integer PRIMARY KEY AUTO_INCREMENT,
+    Name varchar(255) NOT NULL,
+    Card_Number Integer(20),
+    CVV2/CVC2 Integer(3),
+    Amount Float(20),
+);
+
+
+CREATE TABLE transactions(
+    No Integer PRIMARY KEY AUTO_INCREMENT,
+    Date varchar(12) NOT NULL,
+    Description varchar(20),
+    Withdraw decimal(10,2) NOT NULL,
+    Deposit decimal(10,2) NOT NULL,
+    Available_Balance decimal(10,2) NOT NULL
+);
+
+
+//This SQL statement creates records in the transactions table so that the Transactions page can be tested
+ 
+INSERT INTO `transactions` (`No`, `Date`, `Description`, `Withdraw`, `Deposit`, `Available_Balance`) 
+VALUES (NULL, '2018-09-01', 'deposited a check', '', '500.00', '1500.00'), 
+(NULL, '2018-09-01', 'deposited a check', '', '250.00', '1750.00'), 
+(NULL, '2018-09-02', 'took out $100', '100.00', '', '1650.00'), 
+(NULL, '2018-09-03', 'deposited $50', '', '50.00', '1700.00'), 
+(NULL, '2018-09-03', 'used coin machine', '', '4.86', '1704.86'), 
+(NULL, '2018-09-03', 'took out $100', '100.00', '', '1604.86'), 
+(NULL, '2018-09-04', 'made a purchase', '14.06', '', '1590.80'), 
+(NULL, '2018-09-04', 'another purchase', '10.23', '', '1580.57'), 
+(NULL, '2018-09-04', 'bigger purchase', '33.46', '', '1547.11'), 
+(NULL, '2018-09-05', 'deposited some cash', '', '126.00', '1673.11'), 
+(NULL, '2018-09-05', 'gas money', '20.00', '', '1653.11'), 
+(NULL, '2018-09-05', 'pay for Uber ride', '33.15', '', '1619.96'), 
+(NULL, '2018-09-06', 'pay a tip', '4.00', '', '1615.96'), 
+(NULL, '2018-09-06', 'large purchase', '70.86', '', '1545.10'), 
+(NULL, '2018-09-07', 'deposited a check', '', '500.00', '2045.10'), 
+(NULL, '2018-09-08', 'withdrew some cash', '45.00', '', '2000.10');

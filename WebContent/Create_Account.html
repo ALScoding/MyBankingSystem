@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body style="background-color:PaleGreen;">
+<head>
+<meta charset="UTF-8">
+<title>Create Account</title>
+</head>
+<body>
+	<center>
+		<h2>Account Creation Screen</h2>
+	</center>
+					
+		<form action="Register" method="post">
+			Name: &emsp;&emsp;&emsp;&emsp;<input type="text" name="txtName"/>
+			<br/>
+			DOB: &emsp;&emsp;&emsp;&emsp; <input type="text" name="txtDOB"/>
+			<br/>
+            Address:
+            <br/>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<textarea cols="40" rows="5" name="txtAddress"></textarea>
+			<br/>
+            Email ID: &emsp;&emsp;&ensp; <input type="text" name="txtEmail"/>
+            <br/>
+            Type of Account:
+            <select name="txtType">
+  			<option value="None"></option>
+  			<option value="SB">SB Account</option>
+  			<option value="Current">Current</option>
+			</select>
+  
+			<br/>
+            <br/>
+			<input type="hidden" name="reqType" value="register"/>
+			<input type="submit" value="Create Account"/>
+		</form>
+
+</body>
+</html>

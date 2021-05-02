@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body style="background-color:PaleGreen;">
+<head>
+<meta charset="UTF-8">
+<title>Authorize</title>
+</head>
+<body>
+	<center>
+		<h2>Authorize Credit Card Transaction</h2>
+	</center>
+
+		<form action="Authorize" method="post">
+			Name: &emsp;&ensp;&emsp;&emsp; <input type="text" name="txtName"/>
+			<br/>
+			Card Number: &ensp; <input type="text" name="txtCardNum"/>
+			<br/>
+            CVV2/CVC2: &ensp; <input type="text" name="txtCode"/> (3 digit code)
+			<br/>
+            Amount: &emsp;&emsp;&ensp; <input type="text" name="txtAmount"/> (up to $1000)
+			<br/>
+            <br/>
+			<input type="hidden" name="reqType" value="authorize"/>
+			<input type="submit" value="Authorize"/>
+		</form>
+
+</body>
+</html>
